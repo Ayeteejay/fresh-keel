@@ -1,0 +1,21 @@
+@use './variables.scss';
+@use './fonts.scss';
+
+a#primary-btn{
+    // text-transform: uppercase;
+    border:1px solid white;
+    background:white;
+    font-family:var(--bs-font-monospace);
+    font-size:1.5rem;
+    color:variables.$space_gray;
+    padding:2rem 3rem;
+    width:100%;
+    transition: all 200ms;
+    font-weight:600;
+    text-decoration: none;
+    &:hover{
+        background:none;
+        border:1px solid variables.$bright_green;
+        color:variables.$bright_green;
+    }
+}

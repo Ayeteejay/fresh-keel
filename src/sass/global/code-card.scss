@@ -1,0 +1,40 @@
+@use "./variables.scss";
+@use './fonts.scss';
+a.code-wrapper{
+    text-decoration: none;
+    color:white;
+}
+.code-card{
+    border: 1px solid variables.$dark_gray;
+    padding:2rem;
+    margin:1rem;
+    transition:all 200ms;
+    color:white;
+    code.tag{
+        font-size:0.8rem;
+        color:variables.$dark_gray;
+        margin:0 0 1rem 0;
+    }
+    h4{
+        font-family: fonts.$sans-serif;        
+        transition:all 200ms;
+        margin:1.5rem 0 0.5rem 0;
+        font-weight:600;                
+    }
+    code{
+        color:variables.$bright_green;
+        font-size:1.5rem;
+        transition:all 200ms;
+    }
+    &:hover{
+        background:variables.$bright_green;
+        border:1px solid variables.$bright_green;   
+        transform:translate(-5px,-5px);
+        h4, code.tag{
+            color:variables.$dark_green;            
+        }
+        code{
+            color:variables.$space_gray;
+        }     
+    }
+}

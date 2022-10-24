@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400;1,6..72,600&display=swap");
+
+// Variations
+$sans-serif: "Helvetica", sans-serif;
+$serif: "Newsreader", serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  transition: all 250ms;
+}
+p {
+  font-family: $sans-serif;
+  font-size: 16px;
+}
+
+h1.title {
+  font-family: $serif;
+  font-size: 5rem;
+}
