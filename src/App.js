@@ -4,6 +4,7 @@ import SpaceGray from "./components/spaceGray";
 import Footer from "./components/footer";
 import Code from "./components/codeCard";
 import Primary from "./components/primaryBtn";
+import Learn from "./components/learnCard";
 
 function App() {
 
@@ -44,6 +45,29 @@ function App() {
       code:'using System; namespace Program { public class Program { public static void Main(string[] args) {Console.WriteLine("Hello, World!");}}}',
       link:"https://learn.microsoft.com/en-us/dotnet/csharp/",
     },
+  ];
+
+  const learnData = [
+    {
+      id:1,
+      title: "Intro",
+      content: "How to write your first program",
+    },
+    {
+      id:2,
+      title: "Custom",
+      content: "How to customize your program",
+    },
+    {
+      id:3,
+      title: "Loop",
+      content: 'How to loop in your program',
+    },
+    {
+      id:4,
+      title: "Random",
+      content: "How to randomize your program",
+    }
   ]
 
   return (
@@ -56,7 +80,7 @@ function App() {
           <h1 className="serif green">Hello, World!</h1> 
             <p className="large">What is <span className="serif">"Hello, World!"</span> and why is it important?</p>
             <p className="large">Nearly all programming languages use some sort of <span className="serif">"Hello, World!"</span> program that they use as an introduction to their respective language<span className="green">.</span></p>
-            <p className="large">Here are some popular examples:</p>
+            <p className="large">Here are some popular examples<span className="green">:</span></p>
         </Fade>
         </Col>
       </Row>
@@ -69,13 +93,6 @@ function App() {
               })}   
         </Row>
       </Fade>
-      <Row>
-        <Col>
-              <Fade>
-              <p className="large">Today you'll learn how to write your first program that will do the same (and probably a little more!)<span className="green">.</span></p>
-              </Fade>
-        </Col>
-      </Row>
     </Container>
     <div id="green-wrapper">     
       <div className="green-gradient"></div>
@@ -83,24 +100,41 @@ function App() {
           <Row>
             <Col>
             <Fade>
-            <p className="large space-gray"><span className="serif">Today you are going to learn how to code.</span></p>   
+            <p className="large space-gray"><span className="serif">Today you'll learn how to write your first "Hello, World!" program.</span></p>   
             </Fade>
             </Col>
           </Row>      
         </Container> 
     </div>
 
-    <Container id="standard-container">    
+    <Container id="closing-container">    
     <SpaceGray></SpaceGray>
+
+    <Row>
+        <Col>
+        <Fade>    
+            <p className="large">What we'll be learning today<span className="green">:</span></p>            
+        </Fade>
+        </Col>
+      </Row>
+    
+    <Fade>
+      <Row>
+          {learnData.map((value)=>{
+            return (
+              <Learn key={value.id} tag={value.id} title={value.title} content={value.content}></Learn>
+            )
+          })}
+      </Row>
+      </Fade>
       <Row>
         <Col>
-        <Fade>                                   
+        <Fade>    
             <p className="large">Let's get started<span className="green">.</span></p>            
             <Primary title={"Start Here"} link={"https://codepen.io/"}></Primary>
         </Fade>
         </Col>
       </Row>
-
     </Container>
 
     <Fade>

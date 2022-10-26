@@ -1,0 +1,36 @@
+@use './variables.scss';
+@use './fonts.scss';
+
+.learn-card{
+    border: 1px solid variables.$dark_gray;
+    padding:2rem;
+    margin:1rem;
+    transition:all 200ms;
+    color:white;
+    code.tag{
+        font-size:0.8rem;
+        color:variables.$dark_gray;
+        margin:0 0 1rem 0;
+    }
+    h4{
+        font-family: fonts.$sans-serif;        
+        transition: all 250ms ease-in-out;
+        margin:1.5rem 0 0.5rem 0;
+        font-weight:600;         
+        transform:translate(0,100%);       
+    }
+    p.learn-content{
+        opacity:0;        
+        transition: all 250ms ease-in-out;
+    }
+    &:hover{
+        border:1px solid variables.$bright_green;
+        h4{
+            transform:translate(0, 0);       
+            color:variables.$bright_green;
+        }
+        p.learn-content{
+            opacity:1;
+        }
+    }
+}
